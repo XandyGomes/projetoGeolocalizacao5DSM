@@ -21,8 +21,8 @@ export default function HomeScreen({ navigation }) {
               initialRegion={{
                 latitude,	
                 longitude,	
-                latitudeDelta: 0.009,  	
-                longitudeDelta: 0.009,	
+                latitudeDelta: 0.010,  	
+                longitudeDelta: 0.010,	
                 ...coords
               }}
             />
