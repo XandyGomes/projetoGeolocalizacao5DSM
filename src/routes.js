@@ -22,7 +22,7 @@ export default function Routes() {
           }
         }} />
         <Stack.Screen name='main' component={Main} options={{
-          title: 'GEOLOCALIZAÇÃO',
+          title: 'ACESSO A GEOLOCALIZAÇÃO',
           headerLeft: null,
           headerTitleAlign: 'center',
           headerStyle: {

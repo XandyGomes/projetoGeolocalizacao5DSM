@@ -95,7 +95,6 @@ android {
 
     namespace "com.projetodsm"
     defaultConfig {
-        manifestPlaceholders = [API_KEY:"${System.getenv("API_KEY")}"]
         applicationId "com.projetodsm"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion

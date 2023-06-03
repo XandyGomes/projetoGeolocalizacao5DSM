@@ -1,29 +1,30 @@
-import React, { useState } from 'react';
-import MapView from 'react-native-maps';
-import useLocation from '../hooks/useLocation';
+import React, { useState } from 'react'; 
+import MapView from 'react-native-maps';  
+import useLocation from '../hooks/useLocation'; 
 
-export default function Main({ navigation }) {
-  const [latitude, setLatitude] = useState(-20.5149199);
-  const [longitude, setLongitude] = useState(-47.4006887);
-  const { coords, errorMsg } = useLocation();
+export default function HomeScreen({ navigation }) {  
+  const [latitude, setLatitude] = useState(-20.5149138);	
+  const [longitude, setLongitude] = useState(-47.4006943);	
 
-  return (
-    <MapView
-      showsUserLocation={true}
-      showsMyLocationButton={false}
-      toolbarEnabled={false}
-      style={{ 
-        height: '100%',
-        width: '100%',
-        position: 'absolute'
-       }}
-      initialRegion={{
-        latitude,
-        longitude,
-        latitudeDelta: 0.010,
-        longitudeDelta: 0.010,
-        ...coords
-      }}
-    />
-  )
+  const { coords, errorMsg } = useLocation();	    
+	
+  return( 
+           <MapView
+              showsUserLocation={true}		
+     	        showsMyLocationButton={false} 	
+              toolbarEnabled={false}	
+              style={{  
+                height: '100%',
+                width: '100%',
+                position: 'absolute',		
+              }}	
+              initialRegion={{
+                latitude,	
+                longitude,	
+                latitudeDelta: 0.009,  	
+                longitudeDelta: 0.009,	
+                ...coords
+              }}
+            />
+  ) 
 }
